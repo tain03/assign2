@@ -1,76 +1,103 @@
-# Django E-Commerce Store
+# E-Commerce Store
 
-A full-featured e-commerce application built with Django.
+This is a Django-based e-commerce application that allows users to browse products, add them to a cart, and complete the checkout process.
 
-## Features
+## Prerequisites
 
-- User authentication and profile management
-- Product catalog with categories
-- Shopping cart functionality
-- Order management
-- Responsive design using Bootstrap
+- Python 3.10 or higher
+- pip (Python package installer)
 
 ## Setup Instructions
 
-1. Create a virtual environment:
-```bash
-python -m venv venv
-```
+1. **Clone the repository:**
 
-2. Activate the virtual environment:
-- Windows:
-```bash
-venv\Scripts\activate
-```
-- Linux/Mac:
-```bash
-source venv/bin/activate
-```
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
 
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+2. **Create a virtual environment:**
 
-4. Create a .env file in the project root with the following content:
-```
-DEBUG=True
-SECRET_KEY=your-secret-key-here
-```
+   ```bash
+   python -m venv venv
+   ```
 
-5. Run migrations:
-```bash
-python manage.py makemigrations
-python manage.py migrate
-```
+3. **Activate the virtual environment:**
 
-6. Create a superuser:
-```bash
-python manage.py createsuperuser
-```
+   - On Windows:
 
-7. Run the development server:
-```bash
-python manage.py runserver
-```
+     ```bash
+     venv\Scripts\activate
+     ```
 
-8. Access the application at http://127.0.0.1:8000/
+   - On macOS/Linux:
 
-## Admin Interface
+     ```bash
+     source venv/bin/activate
+     ```
 
-Access the admin interface at http://127.0.0.1:8000/admin/ using your superuser credentials.
+4. **Install dependencies:**
 
-## Project Structure
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-- `core/`: Core application with home page and base templates
-- `users/`: User authentication and profile management
-- `products/`: Product catalog and management
-- `cart/`: Shopping cart functionality
-- `orders/`: Order processing and management
+5. **Set up environment variables:**
 
-## Development
+   Create a `.env` file in the project root and add the following variables:
 
-- The application uses Django 5.0.2
-- Frontend is built with Bootstrap 5
-- Forms are styled using django-crispy-forms
-- Image handling is done with Pillow 
+   ```
+   SECRET_KEY=your_secret_key
+   DEBUG=True
+   ALLOWED_HOSTS=localhost,127.0.0.1
+   ```
+
+6. **Run migrations:**
+
+   ```bash
+   python manage.py migrate
+   ```
+
+7. **Create a superuser:**
+
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+8. **Load initial data (optional):**
+
+   ```bash
+   python manage.py loaddata products/fixtures/initial_data.json
+   ```
+
+## Running the Project
+
+1. **Start the development server:**
+
+   ```bash
+   python manage.py runserver
+   ```
+
+2. **Access the application:**
+
+   Open your web browser and go to `http://127.0.0.1:8000/`.
+
+## Features
+
+- User registration and authentication
+- Product browsing and searching
+- Shopping cart functionality
+- Checkout process
+- Order history
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch for your feature.
+3. Commit your changes.
+4. Push to the branch.
+5. Create a new Pull Request.
+
+## License
+
+This project is licensed under the MIT License. 
